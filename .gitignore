@@ -77,14 +77,4 @@ crashlytics-build.properties
 # End of https://www.toptal.com/developers/gitignore/api/unity
 
 # VCC
-Packages/com.vrchat.avatars/
-Packages/com.vrchat.base/
-Packages/com.vrchat.core.vpm-resolver/
-Packages/manifest.json
-Packages/manifest.json
-Packages/packages-lock.json
-Packages/vpm-manifest.json
 ProjectSettings/Packages/com.vrchat.base/
-
-# VCC - Development
-Packages/com.hisacat.vpm.development-tools/
