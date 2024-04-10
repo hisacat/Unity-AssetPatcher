@@ -1,0 +1,17 @@
+{
+    "name": "cat.hisa.asset-patcher.Editor",
+    "references": [
+        "GUID:864a73874571a4544a2ebd7457dd8f0e"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

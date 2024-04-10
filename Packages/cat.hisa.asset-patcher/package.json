@@ -1,0 +1,22 @@
+{
+  "name": "cat.hisa.asset-patcher",
+  "displayName": "HisaCat's AssetPatcher",
+  "version": "1.0.0",
+  "unity": "2019.4",
+  "description": "Tools for create and apply asset patch in Unity",
+  "author": {
+    "name": "HisaCat",
+    "email": "ahisacat@gmail.com",
+    "url": "https://hisa.cat"
+  },
+  "licensesUrl": "https://github.com/hisacat/Unity-AssetPatcher/blob/main/LICENSE",
+  "license": "MIT",
+  "keywords": [
+    "VRChat",
+    "Patch"
+  ],
+  "legacyFolders": {
+    "Assets\\HisaCat\\VRC\\AssetPatcher": "9b65189ed4ab61444bebc46001ff672e"
+  },
+  "type": "tool"
+}

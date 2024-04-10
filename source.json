@@ -1,0 +1,19 @@
+{
+    "name":"HisaCat’s VCC AssetPatcher Listing",
+    "id":"cat.hisa.asset-patcher",
+    "url":"https://hisacat.github.io/Unity-AssetPatcher/index.json",
+    "author":{
+        "email":"ahisacat@gmail.com",
+        "name":"HisaCat",
+        "url":"https://twitter.com/ahisacat"
+    },
+    "description":"HisaCat's VPM AssetPatcher Package Listing",
+    "infoLink":{
+        "url":"https://github.com/hisacat/Unity-AssetPatcher",
+        "text":"View on GitHub"
+    },
+    "bannerUrl":"banner.png",
+    "githubRepos":[
+        "hisacat/Unity-AssetPatcher"
+    ]
+}
