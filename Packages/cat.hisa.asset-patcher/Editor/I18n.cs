@@ -20,6 +20,20 @@ namespace HisaCat.AssetPatcher
         {
             get
             {
+                // Use and set system language when initial loaded.
+                if (EditorPrefs.HasKey(CurrentLanguageKey) == false)
+                {
+                    switch (Application.systemLanguage)
+                    {
+                        case SystemLanguage.Japanese:
+                            return CurrentLanguage = Language.Japanese;
+                        case SystemLanguage.Korean:
+                            return CurrentLanguage = Language.Korean;
+                        default:
+                            return CurrentLanguage = DefaultLanguage;
+                    }
+                }
+
                 var langStr = EditorPrefs.GetString(CurrentLanguageKey);
                 if (System.Enum.TryParse<Language>(langStr, out var lang))
                     return lang;
