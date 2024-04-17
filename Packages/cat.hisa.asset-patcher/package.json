@@ -1,7 +1,7 @@
 {
   "name": "cat.hisa.asset-patcher",
   "displayName": "HisaCat's AssetPatcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2019.4",
   "description": "Tools for create and apply asset patch in Unity",
   "author": {
