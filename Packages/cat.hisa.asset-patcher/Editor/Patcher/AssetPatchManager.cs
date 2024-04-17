@@ -84,6 +84,23 @@ namespace HisaCat.AssetPatcher.Patcher
                 }
             }
 
+            // Create output directory if not exists.
+            var outputIOFolderPath = System.IO.Path.GetDirectoryName(outputIOPath);
+            if (System.IO.Directory.Exists(outputIOFolderPath) == false)
+            {
+                System.IO.Directory.CreateDirectory(outputIOFolderPath);
+                AssetDatabase.Refresh();
+            }
+
+            // Error if folder exists instead file.
+            if (System.IO.Directory.Exists(outputIOPath))
+            {
+                Debug.LogException(
+                    new System.Exception($"Faild to patch. File cannot be created because a folder with the same name \"{System.IO.Path.GetFileName(outputIOPath)}\" exists."),
+                    AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(outputAssetPath));
+                return null;
+            }
+
             // Patch file.
             string originIOPath = PathUtility.GetAssetIOPath(AssetDatabase.GetAssetPath(originFile));
             string diffIOPath = PathUtility.GetAssetIOPath(AssetDatabase.GetAssetPath(asset.DiffFile));
