@@ -39,7 +39,7 @@ namespace HisaCat.AssetPatcher.Patcher
             if (string.IsNullOrEmpty(asset.OutputGUID) == false)
             {
                 var existingOutputAssetPath = AssetDatabase.GUIDToAssetPath(asset.OutputGUID);
-                if (existingOutputAssetPath != null)
+                if (string.IsNullOrEmpty(existingOutputAssetPath) == false && AssetDatabaseUtility.IsAssetExists(existingOutputAssetPath))
                 {
                     if (existingOutputAssetPath != asset.OutputAssetPath)
                     {
@@ -55,10 +55,9 @@ namespace HisaCat.AssetPatcher.Patcher
             }
 
             // Ask overwrite if output asset already exists.
-            string outputIOPath = PathUtility.GetAssetIOPath(outputAssetPath);
             if (doOverwriteSameGUIDOutputAsset == false)
             {
-                if (System.IO.File.Exists(outputIOPath))
+                if (AssetDatabaseUtility.IsAssetExists(outputAssetPath))
                 {
                     if (EditorUtility.DisplayDialog(GetLS("Dialog.AlreadyExists.Title"),
                         string.Format(GetLS("Dialog.AlreadyExists.DescFormat"), outputAssetPath),
@@ -85,6 +84,7 @@ namespace HisaCat.AssetPatcher.Patcher
             }
 
             // Create output directory if not exists.
+            string outputIOPath = PathUtility.GetAssetIOPath(outputAssetPath);
             var outputIOFolderPath = System.IO.Path.GetDirectoryName(outputIOPath);
             if (System.IO.Directory.Exists(outputIOFolderPath) == false)
             {
